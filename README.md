@@ -4,6 +4,9 @@ Ein Erzähler-Werkzeug (Grimoire) für **Blood on the Clocktower**, gebaut fürs
 
 Reine statische Web-App: **kein Build, kein Server nötig**, läuft offline als PWA (zum Home-Bildschirm hinzufügen).
 
+**🎮 Live-App: [lakryu.github.io/botc-grimoire](https://lakryu.github.io/botc-grimoire/)**
+*(sobald GitHub Pages aktiviert ist – siehe [Starten](#-starten))*
+
 ---
 
 ## ✨ Features
@@ -40,8 +43,12 @@ Reine statische Web-App: **kein Build, kein Server nötig**, läuft offline als 
 
 ## 🚀 Starten
 
-### Auf dem iPad/Handy (empfohlen)
-Wenn über **GitHub Pages** gehostet: einfach die URL in Safari öffnen und **„Zum Home-Bildschirm hinzufügen“** – läuft dann als Vollbild-App und offline.
+### Auf dem iPad/Handy (empfohlen) – GitHub Pages
+Einmalig aktivieren: **Settings → Pages → Source: „Deploy from a branch“ → Branch `main` / `root` → Save**. Nach ~1 Minute ist die App erreichbar unter:
+
+**https://lakryu.github.io/botc-grimoire/**
+
+Einfach in Safari öffnen und **„Zum Home-Bildschirm hinzufügen“** – läuft dann als Vollbild-App und offline. (Hinweis: Pages braucht ein öffentliches Repo; die ESP32-Kerzen funktionieren nur über die lokale Variante, da `ws://` unter `https` blockiert wird.)
 
 ### Lokal im WLAN
 Nötig für die ESP32-Kerzen (die brauchen `ws://` und damit http-Hosting). Im Projektordner:
