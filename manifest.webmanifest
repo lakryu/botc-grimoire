@@ -1,0 +1,12 @@
+{
+  "name": "Grimoire – Blood on the Clocktower",
+  "short_name": "Grimoire",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0d0a14",
+  "theme_color": "#0d0a14",
+  "start_url": ".",
+  "icons": [
+    { "src": "assets/icons/imp.png", "sizes": "177x177", "type": "image/png" }
+  ]
+}
