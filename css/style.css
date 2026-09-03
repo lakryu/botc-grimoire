@@ -420,8 +420,37 @@ input[type=range] { width: 140px; }
 .conn-dot.on { background: #4caf50; box-shadow: 0 0 8px #4caf50; }
 
 @media (max-width: 700px) {
-  .bigbtn { min-width: 105px; font-size: 13px; padding: 10px 6px; }
-  .token { width: 64px; height: 64px; }
-  .seat { width: 84px; margin: -42px; }
+  /* Topbar kompakt, kein Umbruch mehr */
+  #topbar { padding: calc(5px + var(--safe-top)) 8px 5px; gap: 4px; }
+  .tb-left, .tb-right, .tb-center { gap: 5px; }
+  .iconbtn { font-size: 18px; padding: 7px 9px; }
+  .phase-label { font-size: 15px; white-space: nowrap; max-width: 86px; overflow: hidden; text-overflow: ellipsis; }
+
+  /* Mitteltext kleiner & einzeilig, kollidiert nicht mehr mit Tokens */
+  #centerInfo { max-width: 62%; }
+  #centerInfo .ci-phase { font-size: 22px; white-space: nowrap; }
+  #centerInfo .ci-sub { font-size: 13px; }
+  #centerInfo .ci-alive { font-size: 12.5px; margin-top: 6px; }
+
+  /* Untere Leiste: alle 5 Buttons passen nebeneinander */
+  #bottombar { gap: 5px; padding: 6px 8px calc(6px + var(--safe-bottom)); }
+  .bigbtn { min-width: 0; flex: 1 1 0; font-size: 11.5px; padding: 11px 4px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  /* Tokens etwas kleiner, Namen/Marker angepasst */
+  .token { width: 62px; height: 62px; }
+  .seat { width: 82px; margin: -41px; }
   .seat .pname { font-size: 12px; }
+  .seat .rname { font-size: 10px; }
+  .rem { font-size: 9.5px; max-width: 92px; }
+
+  /* Panels & Dialoge nutzen die volle Breite */
+  .panel { width: 100vw; border-left: none; }
+  .dialog { max-width: 96vw; }
+}
+
+@media (max-width: 400px) {
+  #centerInfo .ci-phase { font-size: 20px; }
+  .bigbtn { font-size: 10.5px; padding: 10px 3px; }
+  .iconbtn { font-size: 17px; padding: 6px 8px; }
 }
